@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+        <record id="purchase_order_hmg.custom_partner" model="ir.ui.view">
+            <field name="name">purchase.order.hmg.custom.partner</field>
+            <field name="model">res.company</field>
+            <field name='inherit_id' ref='base.view_company_form'/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='favicon']" position="after">
+                    <field name="cod_id"/>
+                    <field name="cod_version"/>
+                    <field name="cod_date"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
